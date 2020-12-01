@@ -76,7 +76,7 @@ const getData = async day => {
     }
     throw e;
   }
-  return data;
+  return data.trim();
 };
 
 const run = async (day, year = 2020) => {
