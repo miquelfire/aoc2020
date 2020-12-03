@@ -21,10 +21,34 @@ const part1 = async d => {
  */
 const part2 = async d => {
 	const data = d.split('\n');
-	return null;
+	const modi = data[0].length;
+	const slopes = [
+		[1, 1],
+		[3, 1],
+		[5, 1],
+		[7, 1],
+		[1, 2]
+	];
+	const trees = [];
+	slopes.forEach(slope => {
+		let treeCount = 0;
+		let x = 0;
+		for (let y = 0; y < data.length; y += slope[1]) {
+			if (data[y][x] == '#') {
+				treeCount++;
+			}
+			x = (x + slope[0]) % modi;
+		}
+		trees.push(treeCount);
+	});
+	let treeCount = 1;
+	trees.forEach(c => {
+		treeCount *= c;
+	});
+	return treeCount;
 }
 
 module.exports = {
 	part1,
-	//part2
+	part2
 };
