@@ -2,7 +2,7 @@
  * @param {string} d 
  */
 const part1 = async d => {
-	const data = d.split('\n').map(e => parseInt(e));
+	const data = d.split('\n');
 	return null;
 }
 
@@ -10,7 +10,7 @@ const part1 = async d => {
  * @param {string} d 
  */
 const part2 = async d => {
-	const data = d.split('\n').map(e => parseInt(e));
+	const data = d.split('\n');
 	return null;
 }
 
