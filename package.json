@@ -4,7 +4,9 @@
   "description": "Just a repo for holding my work for Advent of Code 2020",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "eslint *.js",
+    "lintfix": "eslint *.js --fix"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/miquelfire/aoc2020/issues"
   },
-  "homepage": "https://github.com/miquelfire/aoc2020#readme"
+  "homepage": "https://github.com/miquelfire/aoc2020#readme",
+  "devDependencies": {
+    "eslint": "^7.15.0"
+  }
 }
