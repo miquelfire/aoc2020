@@ -1,4 +1,4 @@
-const runner = require("./runner");
+const runner = require('./runner');
 
 // Instructions:
 // For each day, create a new JS file and a puzzle input file consisting
@@ -21,6 +21,6 @@ const runner = require("./runner");
 // the argument for maxDay is optional, remove it for no limit
 // runner.getDay(5).then((day) => runner.run(day))
 
-runner.run(7);
+runner.run(8);
 
-("");
+('');
