@@ -3,7 +3,7 @@
  */
 const part1 = async d => {
 	let valid = 0;
-	const data = d.split('\n').map(e => e.match(/(\d+)-(\d+) ([a-z]): ([a-z]+)/)).map(e => {
+	d.split('\n').map(e => e.match(/(\d+)-(\d+) ([a-z]): ([a-z]+)/)).map(e => {
 		const min = e[1];
 		const max = e[2];
 		const char = e[3];
@@ -12,14 +12,14 @@ const part1 = async d => {
 	});
 	
 	return valid;
-}
+};
 
 /**
  * @param {string} d 
  */
 const part2 = async d => {
 	let valid = 0;
-	const data = d.split('\n').map(e => e.match(/(\d+)-(\d+) ([a-z]): ([a-z]+)/)).map(e => {
+	d.split('\n').map(e => e.match(/(\d+)-(\d+) ([a-z]): ([a-z]+)/)).map(e => {
 		const pos1 = e[1] - 1;
 		const pos2 = e[2] - 1;
 		const char = e[3];
@@ -28,7 +28,7 @@ const part2 = async d => {
 	});
 	
 	return valid;
-}
+};
 
 module.exports = {
 	part1,

@@ -37,7 +37,7 @@ const part1 = async d => {
 	const bagsChecked = new Set();
 	const bagsToCheck = [];
 	let ourBag = null;
-	const data = d.split('\n')
+	d.split('\n')
 		.map(e => e.replace(/(no other bags)?\./g, '').replace(/bags/g, 'bag').split(' contain '))
 		.map(e => {
 			if (e[1]) {
@@ -75,7 +75,7 @@ const part1 = async d => {
 		});
 	}
 	return bagsThatHasOurs.size;
-}
+};
 
 /**
  * @param {string} d 
@@ -85,7 +85,7 @@ const part2 = async d => {
 	const bagsToCheck = [];
 	let bagsInside = 0;
 	let ourBag = null;
-	const data = d.split('\n')
+	d.split('\n')
 		.map(e => e.replace(/(no other bags)?\./g, '').replace(/bags/g, 'bag').split(' contain '))
 		.map(e => {
 			if (e[1]) {
@@ -119,11 +119,11 @@ const part2 = async d => {
 				for (let i = 0; i < e[0]; i++) {
 					bagsToCheck.push(e[1]);
 				}
-			})
+			});
 		}
 	}
 	return bagsInside;
-}
+};
 
 module.exports = {
 	part1,

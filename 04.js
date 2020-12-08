@@ -10,7 +10,7 @@ const part1 = async d => {
 		return (e.byr && e.iyr && e.eyr && e.hgt && e.hcl && e.ecl && e.pid);
 	});
 	return data.length;
-}
+};
 
 /**
  * @param {string} d 
@@ -32,7 +32,7 @@ const part2 = async d => {
 		);
 	});
 	return data.length;
-}
+};
 
 module.exports = {
 	part1,

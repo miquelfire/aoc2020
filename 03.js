@@ -14,7 +14,7 @@ const part1 = async d => {
 		pos = (pos + move) % modi;
 	});
 	return treeCount;
-}
+};
 
 /**
  * @param {string} d 
@@ -46,7 +46,7 @@ const part2 = async d => {
 		treeCount *= c;
 	});
 	return treeCount;
-}
+};
 
 module.exports = {
 	part1,

@@ -9,18 +9,18 @@ const binSearch = (data, searchRange, sep) => {
 	items.forEach(item => {
 		const half = Math.ceil(search.length / 2);
 		switch (item) {
-			case sep[0]: {
-				search = search.splice(0, half);
-				break;
-			}
-			case sep[1]: {
-				search = search.splice(half);
-				break;
-			}
+		case sep[0]: {
+			search = search.splice(0, half);
+			break;
+		}
+		case sep[1]: {
+			search = search.splice(half);
+			break;
+		}
 		}
 	});
 	return search[0];
-}
+};
 
 /**
  * @param {string} d 
@@ -33,7 +33,7 @@ const part1 = async d => {
 		seats.push(row * 8 + col);
 	});
 	return Math.max(...seats);
-}
+};
 
 /**
  * @param {string} d 
@@ -46,14 +46,13 @@ const part2 = async d => {
 		seats.push(row * 8 + col);
 	});
 	seats.sort();
-	let seat = 0;
 	for (let i = 1; i < seats.length; i++) {
 		if ((seats[i] - seats[i - 1]) == 2) {
 			return seats[i] - 1;
 		}
 	}
 	return 0;
-}
+};
 
 module.exports = {
 	part1,
