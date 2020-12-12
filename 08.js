@@ -22,15 +22,15 @@ const part1 = async d => {
 	while (data[pos][2] == 0 && pos < data.length) {
 		data[pos][2] = 1;
 		switch (data[pos][0]) {
-		case 'jmp':
-			pos += data[pos][1];
-			break;
-		case 'acc':
-			acc += data[pos][1];
-		// eslint-disable-next-line no-fallthrough
-		case 'nop':
-			pos++;
-			break;
+			case 'jmp':
+				pos += data[pos][1];
+				break;
+			case 'acc':
+				acc += data[pos][1];
+				// eslint-disable-next-line no-fallthrough
+			case 'nop':
+				pos++;
+				break;
 		}
 	}
 	return acc;
@@ -47,16 +47,16 @@ const part2 = async d => {
 		while (state[0] < data.length && data[state[0]][2] == 0) {
 			data[state[0]][2] = 1;
 			switch (data[state[0]][0]) {
-			case 'jmp':
-				state[0] += data[state[0]][1];
-				break;
-			case 'nop':
-				state[0]++;
-				break;
-			case 'acc':
-				state[1] += data[state[0]][1];
-				state[0]++;
-				break;
+				case 'jmp':
+					state[0] += data[state[0]][1];
+					break;
+				case 'nop':
+					state[0]++;
+					break;
+				case 'acc':
+					state[1] += data[state[0]][1];
+					state[0]++;
+					break;
 			}
 		}
 	};

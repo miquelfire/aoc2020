@@ -9,14 +9,14 @@ const binSearch = (data, searchRange, sep) => {
 	items.forEach(item => {
 		const half = Math.ceil(search.length / 2);
 		switch (item) {
-		case sep[0]: {
-			search = search.splice(0, half);
-			break;
-		}
-		case sep[1]: {
-			search = search.splice(half);
-			break;
-		}
+			case sep[0]: {
+				search = search.splice(0, half);
+				break;
+			}
+			case sep[1]: {
+				search = search.splice(half);
+				break;
+			}
 		}
 	});
 	return search[0];

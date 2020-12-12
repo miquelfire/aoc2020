@@ -18,20 +18,20 @@ function doStep(prevArea, curArea) {
 				}
 			}
 			switch (prevArea[i][j]) {
-			case 'L': {
+				case 'L': {
 				// Empty seat, check if all eight cells are empty
-				if (seatsFilled == 0) {
-					curArea[i][j] = '#';
+					if (seatsFilled == 0) {
+						curArea[i][j] = '#';
+					}
+					break;
 				}
-				break;
-			}
-			case '#': {
+				case '#': {
 				// Occupied seat, see if there's four other cells like us
-				if (seatsFilled > 4) {
-					curArea[i][j] = 'L';
+					if (seatsFilled > 4) {
+						curArea[i][j] = 'L';
+					}
+					break;
 				}
-				break;
-			}
 			}
 		}
 	}
@@ -181,20 +181,20 @@ function doStep2(prevArea, curArea) {
 			}
 
 			switch (prevArea[i][j]) {
-			case 'L': {
+				case 'L': {
 				// Empty seat, check if all eight cells are empty
-				if (seatsFilled == 0) {
-					curArea[i][j] = '#';
+					if (seatsFilled == 0) {
+						curArea[i][j] = '#';
+					}
+					break;
 				}
-				break;
-			}
-			case '#': {
+				case '#': {
 				// Occupied seat, see if there's four other cells like us
-				if (seatsFilled > 4) {
-					curArea[i][j] = 'L';
+					if (seatsFilled > 4) {
+						curArea[i][j] = 'L';
+					}
+					break;
 				}
-				break;
-			}
 			}
 		}
 	}
