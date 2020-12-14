@@ -24,11 +24,40 @@ const part1 = async d => {
  * @param {string} d 
  */
 const part2 = async d => {
-	const data = d.split('\n');
-	return null;
+	const data = d.replace(/x/g, '-1').split('\n')[1].split(',').map(e=>+e);
+	let lcm = -1;
+	let time = -1;
+	let index = 0;
+	// eslint-disable-next-line no-constant-condition
+	while (true) {
+		const id = data[index];
+		if (id == -1) {
+			index++;
+			continue;
+		}
+
+		if (lcm == -1) {
+			lcm = id;
+			time = id - index;
+			index++;
+			continue;
+		}
+
+		if ((time + index) % id == 0) {
+			if (++index >= data.length) {
+				break;
+			}
+
+			lcm *= id;
+			continue;
+		}
+		
+		time += lcm;
+	}
+	return time;
 };
 
 module.exports = {
 	part1,
-	//part2
+	part2
 };
