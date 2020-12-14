@@ -124,10 +124,6 @@ const part2 = async d => {
 				waypoint[1] += e[1];
 				break;
 			}
-			default: {
-				debugger;
-				break;
-			}
 		}
 	});
 	return Math.abs(pos[0]) + Math.abs(pos[1]);
