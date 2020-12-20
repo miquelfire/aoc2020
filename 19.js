@@ -81,7 +81,14 @@ const part2 = async d => {
 			continue;
 		}
 		if (ruleNo == '11') {
-			rules[11] = '(' + rules[42] + rules[31] + '|' + rules[42] + '(' + rules[42] + rules[31] + ')+' + rules[31] + ')';
+			// 42 31 | 42 11 31
+			rules[11] = '(' +
+				rules[42] + rules[31] + '|' +
+				rules[42] +  rules[42] + rules[31] + rules[31] + '|' +
+				rules[42] +  rules[42] + rules[42] + rules[31] + rules[31] + rules[31] + '|' +
+				rules[42] +  rules[42] + rules[42] + rules[42] + rules[31] + rules[31] + rules[31] + rules[31] + '|' +
+				rules[42] +  rules[42] + rules[42] + rules[42] + rules[42] + rules[31] + rules[31] + rules[31] + rules[31] + rules[31] +
+				')';
 			continue;
 		}
 		rules[+ruleNo] = '(' + ruleParts.reduce((p,v)=>{
@@ -97,6 +104,7 @@ const part2 = async d => {
 		if (re.test(e)) sum++;
 	});
 	//320 too low
+	// 355 too high
 	return sum;
 };
 
